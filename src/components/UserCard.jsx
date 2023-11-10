@@ -14,8 +14,13 @@ const UserCard = ({ user, deleteUser, setInfoUpdate }) => {
     <article className="card">
         <h3 className="card__name"> {user.first_name} {user.last_name} </h3>
         <ul>
-            <li><span className="card__li-desc">Email: </span><span className="card__li-cont"> { user.email } </span></li>
-            <li><span className="card__li-desc">Birthday: </span><span className="card__li-cont"> { user.birthday } </span></li>
+            <li>
+              <span className="card__li-desc">Email: </span><span className="card__li-cont"> { user.email } </span> 
+            </li>
+            <li>
+              <span className="card__li-desc">Birthday: </span><span className="bd card__li-cont"> { user.birthday } </span> &nbsp; &nbsp; &nbsp; &nbsp; 
+              <i className="pt fi fi-rr-party-horn" ></i>  
+            </li>
         </ul>
         <div className='card__btns'>
           <button className="card__btn-trash" onClick={handleDelete}><i className='bx bx-trash'></i></button>
