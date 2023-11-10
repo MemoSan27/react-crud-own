@@ -3,9 +3,11 @@ import './App.css'
 import useCrud from './hooks/useCrud'
 import FormUser from './components/FormUser';
 import UserCard from './components/UserCard';
+import Modal from './components/Modal';
 
 function App() {
- 
+  
+  const [ isModalOpen, setIsModalOpen ] = useState(false);
   const [ infoUpdate, setInfoUpdate ] = useState();
   const url = 'https://users-crud.academlo.tech'
   const [ users, getUsers, createUser, deleteUser, updateUser ] = useCrud(url);
@@ -20,12 +22,24 @@ function App() {
     <div>
       <header className='header'>
         <h2> Users </h2>
-        <button className='header__btn'> <i className='add bx bxs-message-square-add'></i> &nbsp; &nbsp; &nbsp; <span className='header__btn-desc'> Crear un nuevo usuario </span> </button>
+        <button onClick={ () => setIsModalOpen(!isModalOpen)} className='header__btn'> <i className='add bx bxs-message-square-add'></i> &nbsp; &nbsp; &nbsp; <span className='header__btn-desc'> Crear un nuevo usuario </span> </button>
       </header>
     {/*   <FormUser 
         createUser={createUser}
         infoUpdate={infoUpdate}
       /> */}
+      <Modal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}>
+          <FormUser 
+            createUser={createUser}
+            infoUpdate={infoUpdate}
+            setIsModalOpen={setIsModalOpen}
+          />
+          
+      </Modal>
+
+
       <div className='cards-container'>
         {
           users?.map( user => (

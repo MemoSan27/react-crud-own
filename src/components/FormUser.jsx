@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form"
 
 
-const FormUser = ({ createUser, infoUpdate }) => {
+const FormUser = ({ createUser, infoUpdate, setIsModalOpen }) => {
 
   const { register, reset, handleSubmit } = useForm();
 
@@ -19,6 +19,7 @@ const FormUser = ({ createUser, infoUpdate }) => {
         last_name: '',
         birthday: ''
       });
+      setIsModalOpen(false);
   }
 
   return (
