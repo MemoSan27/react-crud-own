@@ -16,7 +16,7 @@ function App() {
     getUsers('/users');
   }, []);
 
-  console.log(users);
+
 
   return (
     <div>
@@ -38,7 +38,9 @@ function App() {
           <FormUser 
             createUser={createUser}
             infoUpdate={infoUpdate}
+            updateUser={updateUser}
             setIsModalOpen={setIsModalOpen}
+            setInfoUpdate={setInfoUpdate}
           />
           
       </Modal>

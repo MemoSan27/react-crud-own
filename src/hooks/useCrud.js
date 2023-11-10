@@ -39,9 +39,12 @@ const useCrud = (baseUrl) => {
     //UPDATE
     const updateApi = (path, id, data) => {
         const url = `${baseUrl}${path}/${id}/`
-        axios.patch(url)
-        .then()
-        .catch()
+        axios.patch(url, data)
+        .then( res => {
+            console.log(res.data)
+            setInfoApi( infoApi.map( item => item.id === id ? res.data : item))
+        })
+        .catch( err => console.log(err))
     }
 
     return [ infoApi, getApi, postApi, deleteApi, updateApi ]

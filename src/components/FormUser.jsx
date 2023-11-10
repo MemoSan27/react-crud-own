@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form"
+import '../css/FormUser.css'
 
 
-const FormUser = ({ createUser, infoUpdate, setIsModalOpen }) => {
+const FormUser = ({ createUser, infoUpdate, setIsModalOpen, updateUser, setInfoUpdate }) => {
 
   const { register, reset, handleSubmit } = useForm();
 
@@ -11,7 +12,12 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen }) => {
   },[infoUpdate])
 
   const submit = (data) => {
-    createUser('/users', data);
+    if(infoUpdate){
+      updateUser('/users', infoUpdate.id, data);
+      setInfoUpdate();
+    }else{
+      createUser('/users', data);
+    }
     reset({
         email: '',
         password: '',
@@ -23,7 +29,8 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen }) => {
   }
 
   return (
-    <div>
+    <div className="form">
+        <h1 className="form__title"> { infoUpdate ? 'Editar Usuario' : 'Nuevo Usuario' }</h1>
         <form onSubmit={handleSubmit(submit)}>
             <label>
                 Email: <input {...register('email')} type="email" required/>

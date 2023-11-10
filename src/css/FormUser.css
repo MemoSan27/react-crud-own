@@ -1,0 +1,9 @@
+input{
+    display: block;
+    width: 100%;
+}
+.form__title{
+    font-size: 3rem;
+    color: blue;
+    margin-bottom: 2rem;
+}
