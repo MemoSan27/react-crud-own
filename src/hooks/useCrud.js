@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react"
 
 const useCrud = (baseUrl) => {
@@ -5,7 +6,7 @@ const useCrud = (baseUrl) => {
 
     //GET
     const getApi = (path) => {
-        const url = `${baseUrl}${path}`;
+        const url = `${baseUrl}${path}/`;
         axios.get(url)
         .then( res => {
             setInfoApi(res.data);
@@ -15,7 +16,7 @@ const useCrud = (baseUrl) => {
 
     //POST
     const postApi = (path, data) => {
-        const url = `${baseUrl}${path}`;
+        const url = `${baseUrl}${path}/`;
         axios.post(url, data)
         .then(res => {
             console.log(res.data)
@@ -25,10 +26,25 @@ const useCrud = (baseUrl) => {
     }
 
     //DELETE
+    const deleteApi = ( path, id ) => {
+        const url = `${baseUrl}${path}/${id}/`
+        axios.delete(url)
+        .then( res => {
+            console.log(res.data)
+            setInfoApi(infoApi.filter(item => item.id !== id))
+        } )
+        .catch( err => console.log(err))
+    }
 
     //UPDATE
+    const updateApi = (path, id, data) => {
+        const url = `${baseUrl}${path}/${id}/`
+        axios.patch(url)
+        .then()
+        .catch()
+    }
 
-    return [ infoApi, getApi, postApi ]
+    return [ infoApi, getApi, postApi, deleteApi, updateApi ]
 }
 
-export default useCrud
+export default useCrud;
