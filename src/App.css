@@ -52,13 +52,37 @@ span{
 .header{
     margin-top: 5rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 3rem;
+}
+@media ( min-width: 680px ) { 
+    .header{
+        flex-direction: row;
+        gap: 0;
+    }
 }
 .header__btn{
     display: inline-block;
     padding: 1rem;
     height: 4rem;
+    background-color: #555A88;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    transition: background-color 300ms;
+}
+.header__btn:hover{
+    background-color: #1C1E2D;
+}
+.add{
+    font-size: 2.5rem;
+}
+.header__btn-desc{
+    font-size: 1.5rem;
 }
 .cards-container{
     display: flex;
@@ -66,10 +90,4 @@ span{
     gap: 2rem;
     justify-content: center;
     margin-top: 5rem;
-}
-.card{
-    width: 33rem;
-    height: fit-content;
-    border: 1px solid gray;
-    padding: 2rem;
 }

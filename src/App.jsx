@@ -20,7 +20,7 @@ function App() {
     <div>
       <header className='header'>
         <h2> Users </h2>
-        <button className='header__btn'> Crear un nuevo usuario </button>
+        <button className='header__btn'> <i className='add bx bxs-message-square-add'></i> &nbsp; &nbsp; &nbsp; <span className='header__btn-desc'> Crear un nuevo usuario </span> </button>
       </header>
     {/*   <FormUser 
         createUser={createUser}

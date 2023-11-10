@@ -1,4 +1,4 @@
-
+import '../css/UserCard.css'
 
 const UserCard = ({ user, deleteUser, setInfoUpdate }) => {
 
@@ -12,13 +12,15 @@ const UserCard = ({ user, deleteUser, setInfoUpdate }) => {
 
   return (
     <article className="card">
-        <h3> {user.first_name} {user.last_name} </h3>
+        <h3 className="card__name"> {user.first_name} {user.last_name} </h3>
         <ul>
-            <li><span>Email: </span><span> { user.email } </span></li>
-            <li><span>Birthday: </span><span> { user.birthday } </span></li>
+            <li><span className="card__li-desc">Email: </span><span className="card__li-cont"> { user.email } </span></li>
+            <li><span className="card__li-desc">Birthday: </span><span className="card__li-cont"> { user.birthday } </span></li>
         </ul>
-        <button onClick={handleDelete}><i className='bx bx-trash'></i></button>
-        <button onClick={handleEdit}><i className='bx bx-edit-alt' ></i></button>
+        <div className='card__btns'>
+          <button className="card__btn-trash" onClick={handleDelete}><i className='bx bx-trash'></i></button>
+          <button className="card__btn-edit" onClick={handleEdit}><i className='bx bx-edit-alt' ></i></button>
+        </div>
     </article>
   )
 }

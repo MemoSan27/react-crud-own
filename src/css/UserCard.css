@@ -1,0 +1,40 @@
+.card{
+    width: 35rem;
+    min-height: 25rem;
+    border: 1px solid #EBEBEB;
+    padding: 2rem;
+    background: radial-gradient(#EBEBEB, lightgray);
+}
+.card__name{
+    font-size: 2.5rem;
+    border-bottom: 1px solid white;
+    margin-bottom: 1rem;
+    min-height: 6.111rem;
+}
+.card__li-desc{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: blue;
+}
+.card__li-cont{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.card__btns{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+.card__btn-trash,
+.card__btn-edit {
+    font-size: 2.5rem;
+    border: none;
+}
+.card__btn-trash{
+    background-color: red;
+    color: white;
+}
+.card__btn-edit{
+    background-color: yellow;
+    color: grey;
+}
