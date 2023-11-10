@@ -40,7 +40,7 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen }) => {
             <label>
                 Birthday: <input {...register('birthday')} type="date" required/>
             </label>
-            <button>Submit</button>
+            <button> { infoUpdate ? 'Editar Usuario' : 'Agregar Usuario' } </button>
         </form>
     </div>
   )

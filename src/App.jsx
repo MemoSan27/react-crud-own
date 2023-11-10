@@ -22,12 +22,16 @@ function App() {
     <div>
       <header className='header'>
         <h2> Users </h2>
-        <button onClick={ () => setIsModalOpen(!isModalOpen)} className='header__btn'> <i className='add bx bxs-message-square-add'></i> &nbsp; &nbsp; &nbsp; <span className='header__btn-desc'> Crear un nuevo usuario </span> </button>
+        <button 
+            onClick={ () => { setIsModalOpen(!isModalOpen); setInfoUpdate(undefined) } } className='header__btn'> 
+            <i className='add bx bxs-message-square-add'></i> 
+            &nbsp; &nbsp; &nbsp; 
+            <span className='header__btn-desc'> 
+            Crear un nuevo usuario 
+            </span> 
+          </button>
       </header>
-    {/*   <FormUser 
-        createUser={createUser}
-        infoUpdate={infoUpdate}
-      /> */}
+    
       <Modal
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}>
@@ -48,6 +52,7 @@ function App() {
               user={user}
               deleteUser={deleteUser}
               setInfoUpdate={setInfoUpdate}
+              setIsModalOpen={setIsModalOpen}
             />
           ))
         }

@@ -1,12 +1,13 @@
 import '../css/UserCard.css'
 
-const UserCard = ({ user, deleteUser, setInfoUpdate }) => {
+const UserCard = ({ user, deleteUser, setInfoUpdate, setIsModalOpen }) => {
 
  const handleDelete = () => {
     deleteUser('/users', user.id)
  }
 
  const handleEdit = () => {
+    setIsModalOpen(true);
     setInfoUpdate(user);
  }
 
