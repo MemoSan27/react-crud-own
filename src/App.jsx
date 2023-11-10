@@ -18,12 +18,15 @@ function App() {
 
   return (
     <div>
-      <h2> Users </h2>
-      <FormUser 
+      <header className='header'>
+        <h2> Users </h2>
+        <button className='header__btn'> Crear un nuevo usuario </button>
+      </header>
+    {/*   <FormUser 
         createUser={createUser}
         infoUpdate={infoUpdate}
-      />
-      <div>
+      /> */}
+      <div className='cards-container'>
         {
           users?.map( user => (
             <UserCard 

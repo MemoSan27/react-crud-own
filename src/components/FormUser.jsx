@@ -25,19 +25,19 @@ const FormUser = ({ createUser, infoUpdate }) => {
     <div>
         <form onSubmit={handleSubmit(submit)}>
             <label>
-                Email: <input {...register('email')} type="email" />
+                Email: <input {...register('email')} type="email" required/>
             </label>
             <label>
-                Password: <input {...register('password')} type="password" />
+                Password: <input {...register('password')} type="password" required/>
             </label>
             <label>
-                First Name: <input {...register('first_name')} type="text" />
+                First Name: <input {...register('first_name')} type="text" required/>
             </label>
             <label>
-                Last Name: <input {...register('last_name')} type="text" />
+                Last Name: <input {...register('last_name')} type="text" required/>
             </label>
             <label>
-                Birthday: <input {...register('birthday')} type="date" />
+                Birthday: <input {...register('birthday')} type="date" required/>
             </label>
             <button>Submit</button>
         </form>

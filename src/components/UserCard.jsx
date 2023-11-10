@@ -11,7 +11,7 @@ const UserCard = ({ user, deleteUser, setInfoUpdate }) => {
  }
 
   return (
-    <article>
+    <article className="card">
         <h3> {user.first_name} {user.last_name} </h3>
         <ul>
             <li><span>Email: </span><span> { user.email } </span></li>
