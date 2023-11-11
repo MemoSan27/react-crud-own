@@ -37,10 +37,7 @@ function App() {
     setUserToDel({});
   }
 
-  console.log(users)
-  
-
-
+ 
   return (
     <div>
       <header className='header'>
