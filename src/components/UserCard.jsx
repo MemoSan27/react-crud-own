@@ -1,9 +1,11 @@
 import '../css/UserCard.css'
 
-const UserCard = ({ user, deleteUser, setInfoUpdate, setIsModalOpen }) => {
+const UserCard = ({ user, deleteUser, setInfoUpdate, setIsModalOpen2, setIsModalOpen, setUserToDel }) => {
 
  const handleDelete = () => {
-    deleteUser('/users', user.id)
+    setIsModalOpen2(true);
+    setUserToDel(user);
+    /* deleteUser('/users', user.id) */
  }
 
  const handleEdit = () => {
@@ -24,7 +26,11 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, setIsModalOpen }) => {
             </li>
         </ul>
         <div className='card__btns'>
-          <button className="card__btn-trash" onClick={handleDelete}><i className='bx bx-trash'></i></button>
+          <button 
+          className="card__btn-trash" 
+          onClick={handleDelete}>
+          <i className='bx bx-trash'></i>
+          </button>
           <button className="card__btn-edit" onClick={handleEdit}><i className='bx bx-edit-alt' ></i></button>
         </div>
     </article>

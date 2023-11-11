@@ -78,6 +78,10 @@ span{
 .header__btn:hover{
     background-color: #1C1E2D;
 }
+.header__title{
+    color: blue;
+    font-weight: 900;
+}
 .add{
     font-size: 2.5rem;
 }
@@ -90,4 +94,34 @@ span{
     gap: 2rem;
     justify-content: center;
     margin-top: 5rem;
+}
+.question__title{
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.question__btns{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.question__btn, 
+.question__btn-2{
+    min-width: 25%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.question__btn{
+    background-color: green;
+}
+.question__btn-2{
+    
+    background-color: red;
+}
+.question__span{
+    color: blue;
+    font-weight: 900;
+    display: inline;
 }

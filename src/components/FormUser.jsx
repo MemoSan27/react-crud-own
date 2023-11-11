@@ -31,7 +31,7 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen, updateUser, setInfoU
   return (
     <div className="form">
         <h1 className="form__title"> { infoUpdate ? 'Editar Usuario' : 'Nuevo Usuario' }</h1>
-        <form onSubmit={handleSubmit(submit)}>
+        <form className="form__box" onSubmit={handleSubmit(submit)}>
             <label>
                 Email: <input {...register('email')} type="email" required/>
             </label>
@@ -47,7 +47,13 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen, updateUser, setInfoU
             <label>
                 Birthday: <input {...register('birthday')} type="date" required/>
             </label>
-            <button> { infoUpdate ? 'Editar Usuario' : 'Agregar Usuario' } </button>
+            <button className="form__btn"> 
+            { 
+              infoUpdate 
+              ? <i className='bx bx-edit' > <span className="aus"> Editar Usuario </span></i>   
+              : <i className='bx bx-message-square-add'> <span className="aus"> Agregar Usuario </span></i>  
+              } 
+            </button>
         </form>
     </div>
   )
