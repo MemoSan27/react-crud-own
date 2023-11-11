@@ -19,7 +19,7 @@ const useCrud = (baseUrl) => {
         const url = `${baseUrl}${path}/`;
         axios.post(url, data)
         .then(res => {
-            console.log(res.data)
+            
             setInfoApi([...infoApi, res.data])
         } )
         .catch(err => console.log(err));
@@ -30,7 +30,7 @@ const useCrud = (baseUrl) => {
         const url = `${baseUrl}${path}/${id}/`
         axios.delete(url)
         .then( res => {
-            console.log(res.data)
+            
             setInfoApi(infoApi.filter(item => item.id !== id))
         } )
         .catch( err => console.log(err))
@@ -41,7 +41,7 @@ const useCrud = (baseUrl) => {
         const url = `${baseUrl}${path}/${id}/`
         axios.patch(url, data)
         .then( res => {
-            console.log(res.data)
+            
             setInfoApi( infoApi.map( item => item.id === id ? res.data : item))
         })
         .catch( err => console.log(err))
