@@ -22,6 +22,13 @@ function App() {
   const handleDelete = () => {
     deleteUser('/users', usertoDel.id)
     setIsModalOpen2(false);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: `Your have been deleted user ${usertoDel?.first_name} ${ usertoDel?.last_name } success`,
+      showConfirmButton: true,
+      
+    });
     setUserToDel({})
   }
 
@@ -30,6 +37,7 @@ function App() {
     setUserToDel({});
   }
 
+  console.log(users)
   
 
 

@@ -39,6 +39,10 @@ input:focus{
     font-size: 2rem;
     width: 60%;
     margin: 4rem auto 0 auto;
+    transition: background-color 300ms;
+}
+.form__btn:hover{
+    background-color: #1C1E2D;
 }
 .aus{
     font-family: 'Lato', sans-serif;

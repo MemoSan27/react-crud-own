@@ -5,7 +5,6 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, setIsModalOpen2, setIsModal
  const handleDelete = () => {
     setIsModalOpen2(true);
     setUserToDel(user);
-    /* deleteUser('/users', user.id) */
  }
 
  const handleEdit = () => {

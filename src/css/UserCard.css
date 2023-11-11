@@ -1,5 +1,5 @@
 .card{
-    width: 35rem;
+    width: 33rem;
     min-height: 25rem;
     border: 1px solid #EBEBEB;
     padding: 2rem;
@@ -34,10 +34,19 @@
 .card__btn-trash{
     background-color: red;
     color: white;
+    transition: background-color 300ms;
+}
+.card__btn-trash:hover{
+    background-color: #AA0000;
+    
 }
 .card__btn-edit{
     background-color: yellow;
     color: grey;
+    transition: background-color 300ms;
+}
+.card__btn-edit:hover{
+    background-color: #AAAA00;
 }
 .pt{
     font-size: 2rem;

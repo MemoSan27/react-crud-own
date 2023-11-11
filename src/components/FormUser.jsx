@@ -15,8 +15,20 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen, updateUser, setInfoU
     if(infoUpdate){
       updateUser('/users', infoUpdate.id, data);
       setInfoUpdate();
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: `Update success`,
+        showConfirmButton: true,
+      });
     }else{
       createUser('/users', data);
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: `New user joined to our database`,
+        showConfirmButton: true,
+      });
     }
     reset({
         email: '',

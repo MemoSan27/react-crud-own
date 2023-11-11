@@ -56,11 +56,14 @@ span{
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
+    
 }
 @media ( min-width: 680px ) { 
     .header{
         flex-direction: row;
         gap: 0;
+        width: 90%;
+        margin: 5rem auto;
     }
 }
 .header__btn{
@@ -115,10 +118,17 @@ span{
 }
 .question__btn{
     background-color: green;
+    transition: background-color 300ms;
+}
+.question__btn:hover{
+    background-color: #004600;
 }
 .question__btn-2{
-    
     background-color: red;
+    transition: background-color 300ms;
+}
+.question__btn-2:hover{
+    background-color: #800614;
 }
 .question__span{
     color: blue;
