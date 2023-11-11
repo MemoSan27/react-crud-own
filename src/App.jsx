@@ -50,7 +50,7 @@ function App() {
             <i className='add bx bxs-message-square-add'></i> 
             &nbsp; &nbsp; &nbsp; 
             <span className='header__btn-desc'> 
-            Crear un nuevo usuario 
+            Create new user
             </span> 
           </button>
       </header>

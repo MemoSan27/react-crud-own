@@ -42,7 +42,7 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen, updateUser, setInfoU
 
   return (
     <div className="form">
-        <h1 className="form__title"> { infoUpdate ? 'Editar Usuario' : 'Nuevo Usuario' }</h1>
+        <h1 className="form__title"> { infoUpdate ? 'Edit User' : 'New User' }</h1>
         <form className="form__box" onSubmit={handleSubmit(submit)}>
             <label>
                 Email: <input {...register('email')} type="email" required/>
@@ -62,8 +62,8 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen, updateUser, setInfoU
             <button className="form__btn"> 
             { 
               infoUpdate 
-              ? <i className='bx bx-edit' > <span className="aus"> Editar Usuario </span></i>   
-              : <i className='bx bx-message-square-add'> <span className="aus"> Agregar Usuario </span></i>  
+              ? <i className='bx bx-edit' > <span className="aus"> Edit User </span></i>   
+              : <i className='bx bx-message-square-add'> <span className="aus"> Add New User </span></i>  
               } 
             </button>
         </form>
