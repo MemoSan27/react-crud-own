@@ -12,7 +12,7 @@ function App() {
   const [ isModalOpen, setIsModalOpen ] = useState(false);
   const [ isModalOpen2, setIsModalOpen2 ] = useState(false);
   const [ infoUpdate, setInfoUpdate ] = useState();
-  const url = 'https://users-crud.academlo.tech'
+  const url = 'https://sequelize-users-crud-dev-rtsc.4.us-1.fl0.io'
   const [ users, getUsers, createUser, deleteUser, updateUser ] = useCrud(url);
 
   useEffect( () => {

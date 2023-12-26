@@ -21,6 +21,7 @@ const FormUser = ({ createUser, infoUpdate, setIsModalOpen, updateUser, setInfoU
         title: `Update success`,
         showConfirmButton: true,
       });
+      
     }else{
       createUser('/users', data);
       Swal.fire({
